@@ -1,0 +1,6 @@
+{
+    "builds": [
+      { "src": "npm run build", "use": "@vercel/node", "output": "/dist" }
+    ]
+  }
+  
