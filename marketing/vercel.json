@@ -1,6 +1,12 @@
 {
     "builds": [
-      { "src": "npm run build", "use": "@vercel/node", "output": "/dist" }
-    ]
+      {
+        "src": "webpack --config config/webpack.prod.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "outputs": {
+      "/dist": "dist"
+    }
   }
   
