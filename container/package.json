@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js",
-    "build": "webpack  --config config/webpack.prod.js",
+    "build": "cross-env NODE_ENV=production PRODUCTION_DOMAIN=https://mfe-marketing-three.vercel.app webpack  --config config/webpack.prod.js",
     "test-build": "webpack server --config config/webpack.prod.js --port 9000 "
   },
   "dependencies": {
