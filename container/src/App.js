@@ -1,19 +1,14 @@
-import React from 'react'
-import MarketingApp from './components/MarketingApp'
+import React from 'react';
+import MarketingApp from './components/MarketingApp';
 import Header from './components/Header'
-import { BrowserRouter } from 'react-router-dom'
 
-const App = () => {
-  
-
+export default () => {
   return (
-    <BrowserRouter>
-      <div>Hi Container
-        <Header/>
-        <MarketingApp/> 
-       </div>
-    </BrowserRouter>
-  )
-}
-
-export default App
+    <div>
+      <h1>Hi there!</h1>
+      <hr />
+      <Header />
+      <MarketingApp />
+    </div>
+  );
+};
