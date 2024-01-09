@@ -24,7 +24,6 @@ const prodConfig = {
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      scriptLoading: 'defer', // or 'async' depending on your requirements
 
     }),
   ],
