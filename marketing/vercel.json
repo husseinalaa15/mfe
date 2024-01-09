@@ -1,0 +1,12 @@
+{
+    "routes": [
+      {
+        "src": "/dist/marketing/(.*)",
+        "dest": "/dist/marketing/$1"
+      },
+      {
+        "handle": "filesystem"
+      }
+    ]
+  }
+  
