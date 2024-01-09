@@ -23,7 +23,7 @@ const prodConfig = {
       shared: packageJson.dependencies,
     }),
     new HtmlWebpackPlugin({
-      template: './marketing/public/index.html',
+      template: './public/index.html',
       scriptLoading: 'defer', // or 'async' depending on your requirements
 
     }),
