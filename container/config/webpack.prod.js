@@ -10,7 +10,7 @@ const prodConfig = {
     output:{
         filename:"[name].[contenthash].js",
         path: path.resolve(__dirname, '../dist/container'),
-            publicPath: '/dist/container',
+            publicPath: '/',
 
     },
     plugins:[
