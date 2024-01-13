@@ -94,14 +94,18 @@ export default function Album() {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
+                  <Link to="/pricing">
                     <Button variant="contained" color="primary">
                       Pricing
                     </Button>
+                  </Link>
                 </Grid>
                 <Grid item>
+                  <Link to="/pricing">
                     <Button variant="outlined" color="primary">
                       Pricing
                     </Button>
+                  </Link>
                 </Grid>
               </Grid>
             </div>

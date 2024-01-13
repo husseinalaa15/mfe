@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -75,6 +76,7 @@ export default function Header({ signedIn, onSignOut }) {
             variant="h6"
             color="inherit"
             noWrap
+            component={RouterLink}
             to="/"
           >
             App
@@ -83,6 +85,7 @@ export default function Header({ signedIn, onSignOut }) {
             color="primary"
             variant="outlined"
             className={classes.link}
+            component={RouterLink}
             to={signedIn ? '/' : '/auth/signin'}
             onClick={onClick}
           >

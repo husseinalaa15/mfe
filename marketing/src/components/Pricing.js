@@ -11,12 +11,15 @@ import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
+import { Link as RouterLink } from 'react-router-dom';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
         Your Website
+      </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -208,6 +211,7 @@ export default function Pricing() {
                 </CardContent>
                 <CardActions>
                   <Button
+                    component={RouterLink}
                     to="/auth/signup"
                     fullWidth
                     color="primary"
@@ -231,7 +235,9 @@ export default function Pricing() {
               <ul>
                 {footer.description.map((item) => (
                   <li key={item}>
+                    <Link href="#" variant="subtitle1" color="textSecondary">
                       {item}
+                    </Link>
                   </li>
                 ))}
               </ul>
