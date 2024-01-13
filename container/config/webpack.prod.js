@@ -17,13 +17,10 @@ const prodConfig = {
         new ModuleFederationPlugin({
             name:"container",
             remotes:{
-                marketing:`marketing@https://mfe-marketing-three.vercel.app/marketing/remoteEntry.js`,
+                marketing:`marketing@https://mfe-marketing-three.vercel.app/remoteEntry.js`,
             },
             shared:packageJson.dependencies
-        }),
-        new HtmlWebpackPlugin({
-            template: './public/index.html',
-          }),
+        })
     ]
 }
 
