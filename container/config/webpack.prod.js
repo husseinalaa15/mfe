@@ -9,8 +9,8 @@ const prodConfig = {
     mode: "production",
     output:{
         filename:"[name].[contenthash].js",
-        // path: path.resolve(__dirname, '../dist/container'),
-            publicPath: '/container/latest/',
+        path: path.resolve(__dirname, '../dist/container/latest'),
+        publicPath: '/container/latest/',
 
     },
     plugins:[
