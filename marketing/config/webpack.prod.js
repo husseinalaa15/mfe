@@ -9,7 +9,7 @@ const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
-    // path: path.resolve(__dirname, '../dist/marketing'),
+    path: path.resolve(__dirname, '../dist/marketing/latest'),
     publicPath: '/marketing/latest/',
 
   },
