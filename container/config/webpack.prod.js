@@ -5,13 +5,13 @@ const commonConfig = require("./webpack.common");
 const webpack = require("webpack");
 const path = require("path");
 const domain = process.env.PRODUCTION_DOMAIN
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const prodConfig = {
     mode: "production",
     output:{
         filename:"[name].[contenthash].js",
         path: path.resolve(__dirname, '../dist/container'),
-        publicPath: '/',
     },
     plugins:[
         new ModuleFederationPlugin({
@@ -21,8 +21,8 @@ const prodConfig = {
             },
             shared:packageJson.dependencies
         }),
-        new webpack.DefinePlugin({
-            'process.env.PRODUCTION_DOMAIN': JSON.stringify(domain)
+        new HtmlWebpackPlugin({
+            template: './public/index.html',
           }),
     ]
 }
