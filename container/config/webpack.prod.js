@@ -10,14 +10,14 @@ const prodConfig = {
     output:{
         filename:"[name].[contenthash].js",
         path: path.resolve(__dirname, '../dist/container'),
-            publicPath: '/',
+            publicPath: '/marketing/',
 
     },
     plugins:[
         new ModuleFederationPlugin({
             name:"container",
             remotes:{
-                marketing:`marketing@https://mfe-marketing-three.vercel.app/remoteEntry.js`,
+                marketing:`marketing@https://mfe-marketing-three.vercel.app/marketing/remoteEntry.js`,
             },
             shared:packageJson.dependencies
         })
