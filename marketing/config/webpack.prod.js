@@ -10,7 +10,7 @@ const prodConfig = {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, '../dist/marketing'),
-    publicPath: '/',
+    publicPath: 'https://marketing-azure-eight.vercel.app/marketing/',
 
   },
   plugins: [
@@ -20,6 +20,7 @@ const prodConfig = {
       exposes: {
         './MarketingApp': './src/bootstrap',
       },
+      
       shared: packageJson.dependencies,
     }),
     new HtmlWebpackPlugin({

@@ -11,7 +11,6 @@ const MarketingApp = () => {
 
   return (
     <>
-    marketing
     <div ref={marketingRef}></div>
     </>
   )

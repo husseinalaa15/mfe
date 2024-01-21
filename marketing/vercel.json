@@ -1,12 +1,15 @@
 {
-    "routes": [
-      {
-        "src": "/dist/marketing/(.*)",
-        "dest": "/dist/marketing/$1"
-      },
-      {
-        "handle": "filesystem"
-      }
-    ]
+  "headers": [
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
+
   }
   
