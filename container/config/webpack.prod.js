@@ -20,7 +20,7 @@ const prodConfig = {
             name:"container",
             remotes:{
                 marketing: 'marketing@https://marketing-azure-eight.vercel.app/marketing/remoteEntry.js',
-                auth: 'auth@http://localhost:8082/remoteEntry.js',
+                auth: 'auth@https://auth-wine-seven.vercel.app/auth/remoteEntry.js',
 
             },
             shared:packageJson.dependencies

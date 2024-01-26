@@ -9,15 +9,15 @@ const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, '../dist/auth'),
-    publicPath: 'https://auth-wine-seven.vercel.app/auth/',
+    path: path.resolve(__dirname, '../dist/dash'),
+    publicPath: 'https://dashboard.vercel.app/auth/',
   },
   plugins: [
     new ModuleFederationPlugin({
       name: 'auth',
       filename: 'remoteEntry.js',
       exposes: {
-        './AuthApp': './src/bootstrap',
+        './DashApp': './src/bootstrap',
       },
       shared: packageJson.dependencies,
     }),
