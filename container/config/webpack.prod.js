@@ -21,6 +21,7 @@ const prodConfig = {
             remotes:{
                 marketing: 'marketing@https://marketing-azure-eight.vercel.app/marketing/remoteEntry.js',
                 auth: 'auth@https://auth-wine-seven.vercel.app/auth/remoteEntry.js',
+                dash: 'dash@https://dash-wine-seven.vercel.app/dash/remoteEntry.js',
 
             },
             shared:packageJson.dependencies

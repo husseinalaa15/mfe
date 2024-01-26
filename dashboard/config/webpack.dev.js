@@ -21,7 +21,7 @@ const devConfig = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'auth',
+      name: 'dash',
       filename: 'remoteEntry.js',
       exposes: {
         './DashApp': './src/bootstrap',
