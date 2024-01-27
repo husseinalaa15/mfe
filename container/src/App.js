@@ -8,37 +8,39 @@ import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 const MarketingLazy =  lazy(()=>  import ('./components/MarketingApp'))
 const AuthLazy =  lazy(()=>  import ('./components/AuthApp'))
 const DashboardLazy = lazy(()=> import ('./components/DashboardApp'))
+const history = createBrowserHistory()
 
 export default () => {
   const generateProductionPrefix = createGenerateClassName({
     productionPrefix:"co"
   })
 
-  const history = createBrowserHistory()
 
   const [isSignedIn,setIsSignedIn] = useState(false);
 
   useEffect(()=>{
     if(isSignedIn){
-      history.push('/dashboard')
-      console.log('dashboar')
-      console.log(isSignedIn)
+        
+        history.push('/dashboard')
+
       
+    }else{
+      history.replace('/')
     }
-  },[isSignedIn,history])
+  },[isSignedIn])
   return (
     <Router history={history}>
         <StylesProvider generateClassName={generateProductionPrefix}>
-          <Header signedIn={isSignedIn}  onSignOut={()=>setIsSignedIn(false)}/>
+          <Header signedIn={isSignedIn}  onSignOut={()=>{setIsSignedIn(false);    history.replace('/');
+}}/>
           <Suspense fallback={<div>Loading...</div>} >
           <Switch>
               <Route path="/auth"  >
                 <AuthLazy onSignin={()=>setIsSignedIn(true)} />
               </Route>
               <Route path="/dashboard"  >
-                {!isSignedIn && <Redirect  to="/"/>}
                 <DashboardLazy />
-                </Route>
+              </Route>
               <Route path="/" component={MarketingLazy} /> 
 
             </Switch>

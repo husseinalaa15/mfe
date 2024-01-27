@@ -2,9 +2,7 @@ const {merge} = require("webpack-merge");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const packageJson = require("../package.json");
 const commonConfig = require("./webpack.common");
-const webpack = require("webpack");
 const path = require("path");
-const domain = process.env.PRODUCTION_DOMAIN
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const prodConfig = {
@@ -12,7 +10,7 @@ const prodConfig = {
     output:{
         filename:"[name].[contenthash].js",
         path: path.resolve(__dirname, '../dist/container'),
-        publicPath: '/', 
+        publicPath: 'https://container-mauve.vercel.app/', 
 
     },
     plugins:[
@@ -21,7 +19,7 @@ const prodConfig = {
             remotes:{
                 marketing: 'marketing@https://marketing-azure-eight.vercel.app/marketing/remoteEntry.js',
                 auth: 'auth@https://auth-wine-seven.vercel.app/auth/remoteEntry.js',
-                dash: 'dash@https://dash-wine-seven.vercel.app/dash/remoteEntry.js',
+                dash: 'dash@https://dashboard-swart-gamma.vercel.app/dash/remoteEntry.js',
 
             },
             shared:packageJson.dependencies

@@ -10,11 +10,11 @@ const prodConfig = {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, '../dist/dash'),
-    publicPath: 'https://dashboard.vercel.app/auth/',
+    publicPath: 'https://dashboard-swart-gamma.vercel.app/dash/',
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'auth',
+      name: 'dash',
       filename: 'remoteEntry.js',
       exposes: {
         './DashApp': './src/bootstrap',
